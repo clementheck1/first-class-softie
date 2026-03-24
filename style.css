@@ -104,7 +104,7 @@ nav {
    ============================================= */
 
 .hero {
-  background: linear-gradient(160deg, var(--blue) 0%, #1e3a7a 60%, #0e1f50 100%);
+  background: linear-gradient(160deg, var(--blue) 0%, #1e3a7a 100%);
   position: relative;
   overflow: hidden;
   display: flex;
