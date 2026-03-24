@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, .nav-brand {
   font-family: 'Nunito', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 a {
@@ -146,11 +146,12 @@ nav {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  letter-spacing: 1px;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  letter-spacing: 0.5px;
   margin-bottom: 0.75rem;
   position: relative;
   z-index: 1;
+  opacity: 0.95;
 }
 
 .hero h1 span {
@@ -231,7 +232,7 @@ nav {
 }
 
 .section-title h2 {
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   color: var(--blue);
   display: inline-block;
   position: relative;
@@ -271,15 +272,15 @@ nav {
 }
 
 .menu-category h3 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.5rem;
-  background: var(--red);
-  color: var(--white);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--blue);
   display: inline-block;
-  padding: 0.3rem 1.2rem;
-  border-radius: 6px;
+  padding: 0.3rem 0;
   margin-bottom: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  border-bottom: 3px solid var(--red);
 }
 
 .menu-grid {
@@ -320,7 +321,8 @@ nav {
 }
 
 .info-strip h2 {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
@@ -358,7 +360,8 @@ nav {
 }
 
 .page-hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  font-weight: 600;
   position: relative;
   z-index: 1;
 }
