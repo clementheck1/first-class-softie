@@ -832,10 +832,8 @@ footer a:hover {
 
 footer .footer-logo {
   height: 80px;
-  width: 80px;
   margin: 0 auto 1rem;
-  border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* =============================================
