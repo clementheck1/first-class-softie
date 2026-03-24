@@ -90,14 +90,13 @@ nav {
   font-family: 'Fredoka One', cursive;
   font-size: 1.1rem;
   padding: 0.5rem 1rem;
-  border-radius: 30px;
-  transition: background 0.2s, color 0.2s;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  background: var(--red);
-  color: var(--white);
+  border-bottom-color: var(--red);
 }
 
 /* =============================================
