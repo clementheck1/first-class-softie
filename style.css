@@ -558,6 +558,257 @@ nav {
 }
 
 /* =============================================
+   HOW IT WORKS
+   ============================================= */
+
+.how-it-works {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =============================================
+   EVENTS WE SERVE
+   ============================================= */
+
+.events-section {
+  padding: 4rem 2rem;
+  background: var(--cream);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: var(--white);
+  border: 2px solid #e8e4cc;
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.event-card:hover {
+  border-color: var(--blue);
+  transform: translateY(-3px);
+}
+
+.event-card h3 {
+  font-size: 1.15rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.event-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.event-card .btn {
+  font-size: 0.85rem;
+  padding: 0.5rem 1.25rem;
+}
+
+/* =============================================
+   SERVICE AREA
+   ============================================= */
+
+.service-area {
+  padding: 4rem 2rem;
+  background: var(--white);
+  text-align: center;
+}
+
+.service-area > p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.area-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.area-badge {
+  background: var(--blue);
+  color: var(--white);
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  letter-spacing: 0.3px;
+}
+
+/* =============================================
+   FAQ SECTION
+   ============================================= */
+
+.faq-section {
+  padding: 4rem 2rem;
+  background: var(--cream);
+}
+
+.faq-list {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: var(--white);
+  border: 2px solid #e8e4cc;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.faq-item:hover {
+  border-color: var(--blue);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--dark);
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: 'Nunito', sans-serif;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--blue);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-item.open .faq-question::after {
+  content: '\2212';
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+}
+
+.faq-answer p {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* =============================================
+   VALUES GRID (About page)
+   ============================================= */
+
+.values-section {
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: var(--cream);
+  border: 2px solid #e8e4cc;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.value-card:hover {
+  border-color: var(--blue);
+}
+
+.value-card h3 {
+  font-size: 1.1rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 
@@ -596,4 +847,7 @@ footer .footer-logo {
   .about-grid  { grid-template-columns: 1fr; }
   .form-row    { grid-template-columns: 1fr; }
   .about-mascot { order: -1; }
+  .steps-grid  { grid-template-columns: 1fr; gap: 1rem; }
+  .events-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
 }
