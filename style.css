@@ -302,11 +302,6 @@ nav {
   transform: translateY(-2px);
 }
 
-.menu-item::before {
-  content: '🍦';
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
 
 /* =============================================
    INFO STRIP
@@ -457,8 +452,15 @@ nav {
 }
 
 .info-card .icon {
-  font-size: 2rem;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.5rem;
+}
+
+.info-card .icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--blue);
 }
 
 .info-card h3 {
