@@ -33,7 +33,8 @@ body {
 }
 
 h1, h2, h3, .nav-brand {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
 }
 
 a {
@@ -417,16 +418,10 @@ nav {
 }
 
 .badge-list li {
-  background: var(--white);
-  border: 2px solid #e8e4cc;
-  border-left: 5px solid var(--red);
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 0;
   font-weight: 600;
   font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  color: #444;
 }
 
 /* =============================================
