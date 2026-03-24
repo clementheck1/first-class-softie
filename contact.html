@@ -89,7 +89,7 @@
           <div class="form-group">
             <label for="event-type">Event Type</label>
             <select id="event-type" name="event_type">
-              <option value="" disabled selected>Select an optionâ¦</option>
+              <option value="" disabled selected>Select an option…</option>
               <option value="birthday">Birthday Party</option>
               <option value="block-party">Block Party</option>
               <option value="corporate">Corporate Event</option>
@@ -108,7 +108,7 @@
 
         <div class="form-group">
           <label for="message">Message *</label>
-          <textarea id="message" name="message" placeholder="Tell us about your event â expected number of guests, location, any special requestsâ¦" required></textarea>
+          <textarea id="message" name="message" placeholder="Tell us about your event — expected number of guests, location, any special requests…" required></textarea>
         </div>
 
         <button type="submit" class="btn-submit">Send Message</button>
@@ -155,14 +155,14 @@
           success.style.display = 'block';
           success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
-          // Fall back â open default mail client
+          // Fall back — open default mail client
           const name    = document.getElementById('name').value;
           const email   = document.getElementById('email').value;
           const message = document.getElementById('message').value;
           window.location.href = `mailto:firstclasssoftee@gmail.com?subject=Event Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + '\n\nReply to: ' + email)}`;
         }
       } catch {
-        // Offline fallback â mailto
+        // Offline fallback — mailto
         const name    = document.getElementById('name').value;
         const email   = document.getElementById('email').value;
         const message = document.getElementById('message').value;
