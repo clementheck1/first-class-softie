@@ -272,50 +272,68 @@ nav {
   background: var(--cream);
 }
 
-.menu-categories {
+.menu-showcase {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.menu-category {
-  margin-bottom: 3rem;
-}
-
-.menu-category h3 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 1.35rem;
-  color: var(--blue);
-  display: inline-block;
-  padding: 0.3rem 0;
-  margin-bottom: 1rem;
-  letter-spacing: 0.3px;
-  border-bottom: 3px solid var(--red);
-}
-
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 0.75rem;
-}
-
-.menu-item {
+.menu-card {
   background: var(--white);
   border: 2px solid #e8e4cc;
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--dark);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
   transition: border-color 0.2s, transform 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
-.menu-item:hover {
+.menu-card:hover {
   border-color: var(--blue);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+}
+
+.menu-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+.menu-card h3 {
+  font-size: 1.1rem;
+  color: var(--blue);
+  margin-bottom: 0.4rem;
+}
+
+.menu-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.menu-card-count {
+  display: inline-block;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.78rem;
+  color: var(--blue);
+  background: rgba(53, 90, 165, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.menu-cta {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.menu-cta a {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 
@@ -862,6 +880,10 @@ footer .footer-logo {
    RESPONSIVE
    ============================================= */
 
+@media (max-width: 900px) {
+  .menu-showcase { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 650px) {
   .nav-links a { font-size: 0.95rem; padding: 0.4rem 0.7rem; }
   .about-grid  { grid-template-columns: 1fr; }
@@ -870,4 +892,5 @@ footer .footer-logo {
   .steps-grid  { grid-template-columns: 1fr; gap: 1rem; }
   .events-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
+  .menu-showcase { grid-template-columns: repeat(2, 1fr); }
 }
