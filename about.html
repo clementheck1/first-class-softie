@@ -21,6 +21,9 @@
     <a href="index.html" class="nav-brand">
       <img src="UpdatedLogo.png" alt="First Class Softee Logo" />
     </a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
@@ -135,6 +138,18 @@
     <p style="margin-top:0.5rem;">Manchester, NH &nbsp;|&nbsp; <a href="http://localsoftee.com">localsoftee.com</a></p>
     <p style="margin-top:1rem; font-size:0.8rem; opacity:0.5;">&copy; 2026 First Class Softee. All rights reserved.</p>
   </footer>
+
+  <script>
+    (function() {
+      var toggle = document.querySelector('.nav-toggle');
+      var navLinks = document.querySelector('.nav-links');
+      if (!toggle) return;
+      toggle.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+        toggle.classList.toggle('open');
+      });
+    })();
+  </script>
 
 </body>
 </html>
