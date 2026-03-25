@@ -104,7 +104,6 @@ nav {
    ============================================= */
 
 .hero {
-  background: linear-gradient(160deg, var(--blue) 0%, #1e3a7a 100%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -114,8 +113,31 @@ nav {
   text-align: center;
   padding: 5rem 2rem 6rem;
   color: var(--white);
+  min-height: 90vh;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: -15% 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  transform: scale(1.15);
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(53, 90, 165, 0.72) 0%,
+    rgba(30, 58, 122, 0.78) 50%,
+    rgba(26, 26, 46, 0.85) 100%
+  );
+  z-index: 0;
+}
 
 .hero-logo {
   width: min(280px, 60vw);

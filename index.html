@@ -62,6 +62,8 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-bg" style="background-image:url('ice-cream-hero.jpg')"></div>
+    <div class="hero-overlay"></div>
     <img class="hero-logo" src="UpdatedLogo.png" alt="First Class Softee Mascot" />
     <h1>Manchester's <span>First Class</span> Soft Serve</h1>
     <p>New Hampshire's premier mobile ice cream truck serving up fresh, creamy soft serve at local events across the Manchester area.</p>
@@ -334,6 +336,23 @@
         item.classList.toggle('open');
       });
     });
+
+    /* Fluid vertical parallax for hero background */
+    (function() {
+      var heroBg = document.querySelector('.hero-bg');
+      if (!heroBg) return;
+      var ticking = false;
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            var scrollY = window.pageYOffset;
+            heroBg.style.transform = 'translate3d(0,' + (scrollY * 0.45) + 'px,0) scale(1.15)';
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
   </script>
 
 </body>
