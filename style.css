@@ -82,7 +82,7 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 0.25rem;
+  gap: 1rem;
 }
 
 .nav-links a {
