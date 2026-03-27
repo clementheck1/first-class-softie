@@ -99,6 +99,13 @@ nav {
   border-bottom-color: var(--red);
 }
 
+.nav-links a.nav-contact {
+  background: var(--red);
+  border-radius: 4px;
+  border-bottom-color: transparent;
+  padding: 0.5rem 1rem;
+}
+
 /* Hamburger toggle — hidden on desktop */
 .nav-toggle {
   display: none;
