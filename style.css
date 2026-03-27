@@ -722,7 +722,7 @@ nav {
 
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -948,6 +948,7 @@ footer .footer-logo {
 
 @media (max-width: 900px) {
   .menu-showcase { grid-template-columns: repeat(2, 1fr); }
+  .events-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
