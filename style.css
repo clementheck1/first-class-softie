@@ -1160,6 +1160,17 @@ footer a:hover {
 
   .nav-links li { text-align: center; }
 
+  .nav-links li:last-child {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links a.nav-contact {
+    width: auto;
+    display: inline-flex;
+  }
+
   .nav-links a {
     display: block;
     padding: 1rem 1.5rem;
