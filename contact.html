@@ -34,6 +34,8 @@
 
   <!-- PAGE HERO -->
   <div class="page-hero">
+    <div class="hero-bg" style="background-image:url('ice-cream-hero.jpg')"></div>
+    <div class="hero-overlay"></div>
     <h1>Get In Touch</h1>
     <p>Want us at your next event? Have a question? We'd love to hear from you!</p>
   </div>
@@ -130,13 +132,29 @@
 
   <!-- FOOTER -->
   <footer>
-    <img class="footer-logo" src="UpdatedLogo.png" alt="First Class Softee" />
-    <p>
-      <a href="mailto:firstclasssoftee@gmail.com">firstclasssoftee@gmail.com</a> &nbsp;|&nbsp;
-      <a href="tel:9788731332">(978) 873-1332</a>
-    </p>
-    <p style="margin-top:0.5rem;">Manchester, NH &nbsp;|&nbsp; <a href="http://localsoftee.com">localsoftee.com</a></p>
-    <p style="margin-top:1rem; font-size:0.8rem; opacity:0.5;">&copy; 2026 First Class Softee. All rights reserved.</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="UpdatedLogo.png" alt="First Class Softee" />
+        <p>Manchester's favorite mobile ice cream truck. Bringing joy, one scoop at a time.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Book</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <a href="mailto:firstclasssoftee@gmail.com">firstclasssoftee@gmail.com</a>
+        <a href="tel:9788731332">(978) 873-1332</a>
+        <p>Manchester, NH</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 First Class Softee. All rights reserved.
+    </div>
   </footer>
 
   <script>
@@ -181,9 +199,28 @@
       var toggle = document.querySelector('.nav-toggle');
       var navLinks = document.querySelector('.nav-links');
       if (!toggle) return;
-      toggle.addEventListener('click', function() {
+
+      function closeMenu() {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        document.body.classList.remove('menu-open');
+      }
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
         navLinks.classList.toggle('open');
         toggle.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
+
+      navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', function(e) {
+        if (navLinks.classList.contains('open') && !e.target.closest('nav')) {
+          closeMenu();
+        }
       });
     })();
   </script>

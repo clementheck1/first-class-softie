@@ -34,6 +34,8 @@
 
   <!-- PAGE HERO -->
   <div class="page-hero">
+    <div class="hero-bg" style="background-image:url('ice-cream-hero.jpg')"></div>
+    <div class="hero-overlay"></div>
     <h1>About First Class Softee</h1>
     <p>Bringing joy, one scoop at a time &mdash; right here in Manchester, NH.</p>
   </div>
@@ -52,7 +54,7 @@
         <p>
           From classic vanilla twists to wild specialty cones loaded with toppings, we craft every order fresh right from our truck. Our menu features over 40 soft serve creations &mdash; sundaes, waffle cones, double cones, specialty Merlins, shakes, and more &mdash; so there's truly something for everyone, from kids to grandparents.
         </p>
-        <p>
+        <p class="callout">
           We started First Class Softee because we believe nothing brings people together quite like ice cream. There's something special about hearing that ice cream truck music, lining up at the window, and watching the smiles as everyone picks their favorite treat. That moment of joy is what drives us every single day.
         </p>
         <p>
@@ -81,44 +83,48 @@
 
   <!-- WHAT SETS US APART -->
   <section class="values-section">
-    <div class="section-title">
+    <div class="section-title fade-in">
       <h2>What Sets Us Apart</h2>
     </div>
     <div class="values-grid">
-      <div class="value-card">
+      <div class="value-card fade-in">
+        <div class="value-card-icon">&#x1F4CD;</div>
         <h3>Locally Owned &amp; Operated</h3>
         <p>We're rooted in the Manchester, NH community. This isn't a franchise &mdash; it's a local business built on a love for ice cream and the people we serve.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card fade-in">
+        <div class="value-card-icon">&#x1F366;</div>
         <h3>Huge Menu Selection</h3>
         <p>Over 40 soft serve creations including waffle cones, sundaes, specialty Merlins, double cones, dipped cones, and shakes. Something for every taste.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card fade-in">
+        <div class="value-card-icon">&#x23F0;</div>
         <h3>Flexible &amp; Reliable</h3>
         <p>We show up on time, set up fast, and serve with a smile. Whether it's 20 guests or 200, we keep the line moving and the ice cream flowing.</p>
       </div>
-      <div class="value-card">
+      <div class="value-card fade-in">
+        <div class="value-card-icon">&#x1F389;</div>
         <h3>Events of All Sizes</h3>
         <p>From intimate backyard birthday parties to large community festivals and corporate events &mdash; no event is too big or too small for First Class Softee.</p>
       </div>
     </div>
   </section>
 
-  <!-- AREAS WE SERVE -->
+  <!-- OUR COMMUNITY -->
   <section class="service-area">
-    <div class="section-title">
-      <h2>Areas We Serve</h2>
+    <div class="section-title fade-in">
+      <h2>Proudly Part of Your Community</h2>
     </div>
-    <p>Our ice cream truck is fully mobile and ready to travel across the greater Manchester, New Hampshire area. We regularly serve events in the following communities and are always happy to discuss locations beyond this list.</p>
+    <p>We're not just an ice cream truck &mdash; we're your neighbors. First Class Softee is proud to be part of the greater Manchester community, showing up at the events and celebrations that bring people together across southern New Hampshire.</p>
     <div class="area-badges">
-      <span class="area-badge">Manchester</span>
-      <span class="area-badge">Bedford</span>
-      <span class="area-badge">Goffstown</span>
-      <span class="area-badge">Hooksett</span>
-      <span class="area-badge">Auburn</span>
-      <span class="area-badge">Londonderry</span>
-      <span class="area-badge">Derry</span>
-      <span class="area-badge">Merrimack</span>
+      <span class="area-badge-outline">Manchester</span>
+      <span class="area-badge-outline">Bedford</span>
+      <span class="area-badge-outline">Goffstown</span>
+      <span class="area-badge-outline">Hooksett</span>
+      <span class="area-badge-outline">Auburn</span>
+      <span class="area-badge-outline">Londonderry</span>
+      <span class="area-badge-outline">Derry</span>
+      <span class="area-badge-outline">Merrimack</span>
     </div>
   </section>
 
@@ -131,23 +137,74 @@
 
   <!-- FOOTER -->
   <footer>
-    <img class="footer-logo" src="UpdatedLogo.png" alt="First Class Softee" />
-    <p>
-      <a href="mailto:firstclasssoftee@gmail.com">firstclasssoftee@gmail.com</a> &nbsp;|&nbsp;
-      <a href="tel:9788731332">(978) 873-1332</a>
-    </p>
-    <p style="margin-top:0.5rem;">Manchester, NH &nbsp;|&nbsp; <a href="http://localsoftee.com">localsoftee.com</a></p>
-    <p style="margin-top:1rem; font-size:0.8rem; opacity:0.5;">&copy; 2026 First Class Softee. All rights reserved.</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="UpdatedLogo.png" alt="First Class Softee" />
+        <p>Manchester's favorite mobile ice cream truck. Bringing joy, one scoop at a time.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Book</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <a href="mailto:firstclasssoftee@gmail.com">firstclasssoftee@gmail.com</a>
+        <a href="tel:9788731332">(978) 873-1332</a>
+        <p>Manchester, NH</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 First Class Softee. All rights reserved.
+    </div>
   </footer>
 
   <script>
+    /* Mobile nav toggle */
     (function() {
       var toggle = document.querySelector('.nav-toggle');
       var navLinks = document.querySelector('.nav-links');
       if (!toggle) return;
-      toggle.addEventListener('click', function() {
+
+      function closeMenu() {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        document.body.classList.remove('menu-open');
+      }
+
+      toggle.addEventListener('click', function(e) {
+        e.stopPropagation();
         navLinks.classList.toggle('open');
         toggle.classList.toggle('open');
+        document.body.classList.toggle('menu-open');
+      });
+
+      navLinks.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      document.addEventListener('click', function(e) {
+        if (navLinks.classList.contains('open') && !e.target.closest('nav')) {
+          closeMenu();
+        }
+      });
+    })();
+
+    /* Scroll reveal */
+    (function() {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.fade-in').forEach(function(el) {
+        observer.observe(el);
       });
     })();
   </script>
